@@ -6,17 +6,27 @@ function About() {
         className="px-5 py-3 border-b-2 border-pink-300 flex-shrink-0"
         style={{ background: 'linear-gradient(135deg, #FFF0F5, #FFE4EC, #FFF0F5)' }}
       >
-        <p
-          className="font-bold uppercase tracking-wider text-center"
-          style={{
-            fontFamily: "'Press Start 2P', 'Chicago', monospace",
-            fontSize: '10px',
-            color: '#C2185B',
-            lineHeight: '1.8',
-          }}
-        >
-          👾 ABOUT SABRINA // 关于我
-        </p>
+        <p className="font-bold uppercase text-center" style={{ lineHeight: '1.8' }}>
+            <span
+              style={{
+                fontFamily: "'Press Start 2P', 'Chicago', monospace",
+                fontSize: '10px',
+                color: '#C2185B',
+              }}
+            >
+              👾 ABOUT SABRINA //{' '}
+            </span>
+            <span
+              className="font-bold"
+              style={{
+                fontFamily: "'Noto Sans SC', 'PingFang SC', sans-serif",
+                fontSize: '13px',
+                color: '#C2185B',
+              }}
+            >
+              关于我
+            </span>
+          </p>
         <p className="text-center mt-1 text-xs text-gray-500">
           复合型数据像素人类，正在探索数字与视觉的无尽边界。
         </p>

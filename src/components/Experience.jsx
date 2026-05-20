@@ -137,17 +137,27 @@ function Experience() {
           className="px-5 py-3 border-b-2 border-pink-300"
           style={{ background: 'linear-gradient(135deg, #FFF0F5, #FFE4EC, #FFF0F5)' }}
         >
-          <p
-            className="font-bold uppercase tracking-wider text-center"
-            style={{
-              fontFamily: "'Press Start 2P', 'Chicago', monospace",
-              fontSize: '10px',
-              color: '#C2185B',
-              textShadow: '0 0 8px rgba(255,20,147,0.3)',
-              lineHeight: '1.8',
-            }}
-          >
-            💼 MY INTERNSHIP EXPERIENCE // 实习经历板块
+          <p className="font-bold uppercase text-center" style={{ lineHeight: '1.8' }}>
+            <span
+              style={{
+                fontFamily: "'Press Start 2P', 'Chicago', monospace",
+                fontSize: '10px',
+                color: '#C2185B',
+                textShadow: '0 0 8px rgba(255,20,147,0.3)',
+              }}
+            >
+              💼 MY INTERNSHIP EXPERIENCE //{' '}
+            </span>
+            <span
+              className="font-bold"
+              style={{
+                fontFamily: "'Noto Sans SC', 'PingFang SC', sans-serif",
+                fontSize: '13px',
+                color: '#C2185B',
+              }}
+            >
+              实习经历板块
+            </span>
           </p>
           <p
             className="text-center mt-1"

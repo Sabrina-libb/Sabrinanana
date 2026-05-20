@@ -78,14 +78,22 @@ function WelcomeBubble() {
         className="font-bold"
         style={{
           fontFamily: "'Noto Sans SC', 'PingFang SC', sans-serif",
-          fontSize: '13px',
+          fontSize: '12px',
           color: '#C2185B',
-          lineHeight: '2',
-          margin: '6px 0 0 0',
+          lineHeight: '2.2',
+          margin: '8px 0 0 0',
           textAlign: 'center',
         }}
       >
-        点击旁边的物件可以解锁不同的秘密板块哦
+        📸 拍立得 → 实习经历
+        <br />
+        ✉️ 信封 → 数据能力
+        <br />
+        🐱 小猫照片 → About Me
+        <br />
+        🗺️ 拍立得相纸 → 照片集
+        <br />
+        🎵 MP3 → 个人作品
       </p>
     </div>
   );
