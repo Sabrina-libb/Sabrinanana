@@ -1,23 +1,7 @@
-import { useState, useEffect, useRef } from 'react';
-import { useWindowStore } from '../windowStore';
-
 function WelcomeBubble() {
-  const hasClicked = useWindowStore((s) => s.hasClicked);
-  const [dismissed, setDismissed] = useState(false);
-  const timerRef = useRef(null);
-
-  useEffect(() => {
-    if (hasClicked && !dismissed) {
-      timerRef.current = setTimeout(() => setDismissed(true), 500);
-      return () => clearTimeout(timerRef.current);
-    }
-  }, [hasClicked, dismissed]);
-
-  if (dismissed) return null;
-
   return (
     <div
-      className={`welcome-bubble${hasClicked ? ' welcome-bubble-dismiss' : ''}`}
+      className="welcome-bubble"
       style={{
         position: 'absolute',
         left: '50%',
@@ -77,9 +61,9 @@ function WelcomeBubble() {
         className="font-bold"
         style={{
           fontFamily: "'Noto Sans SC', 'PingFang SC', sans-serif",
-          fontSize: '12px',
+          fontSize: '13px',
           color: '#C2185B',
-          lineHeight: '2.2',
+          lineHeight: '2',
           margin: '8px 0 0 0',
           textAlign: 'center',
         }}
