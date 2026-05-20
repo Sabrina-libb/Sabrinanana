@@ -4,9 +4,8 @@ function WelcomeBubble() {
       className="welcome-bubble"
       style={{
         position: 'absolute',
-        left: '50%',
-        top: '4%',
-        transform: 'translateX(-50%)',
+        right: '6%',
+        top: '18%',
         zIndex: 25,
         background: '#FFFAFD',
         border: '2px solid #FF1493',

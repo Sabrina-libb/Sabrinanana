@@ -645,8 +645,8 @@ body::after {
    Welcome Bubble — dialogue above cat/character in Mac window
    ============================================================ */
 @keyframes welcomeBubbleFloat {
-  0%, 100% { transform: translateX(-50%) translateY(0); }
-  50%      { transform: translateX(-50%) translateY(-6px); }
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-6px); }
 }
 
 .welcome-bubble {
@@ -659,8 +659,8 @@ body::after {
 }
 
 @keyframes welcomeBubbleDismiss {
-  0%   { opacity: 1; transform: translateX(-50%) translateY(0); }
-  100% { opacity: 0; transform: translateX(-50%) translateY(-12px); }
+  0%   { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-12px); }
 }
 
 @keyframes welcomeLineIn {
