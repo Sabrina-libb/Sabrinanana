@@ -62,10 +62,11 @@ function WelcomeBubble() {
       />
 
       <p
+        className="font-bold"
         style={{
-          fontFamily: "'Press Start 2P', 'Chicago', monospace",
-          fontSize: '7px',
-          color: '#FF1493',
+          fontFamily: "'Noto Sans SC', 'PingFang SC', sans-serif",
+          fontSize: '13px',
+          color: '#C2185B',
           lineHeight: '2',
           margin: 0,
           textAlign: 'center',
@@ -74,12 +75,13 @@ function WelcomeBubble() {
         👩🏻‍💻 Sabrina & 🐱 北北：欢迎来到我的个人网站！
       </p>
       <p
+        className="font-bold"
         style={{
           fontFamily: "'Noto Sans SC', 'PingFang SC', sans-serif",
-          fontSize: '11px',
-          color: '#666',
-          lineHeight: '1.8',
-          margin: '4px 0 0 0',
+          fontSize: '13px',
+          color: '#C2185B',
+          lineHeight: '2',
+          margin: '6px 0 0 0',
           textAlign: 'center',
         }}
       >
