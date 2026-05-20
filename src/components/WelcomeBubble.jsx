@@ -1,16 +1,15 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useWindowStore } from '../windowStore';
 
 function WelcomeBubble() {
-  const [dismissed, setDismissed] = useState(false);
-  const [fadingOut, setFadingOut] = useState(false);
   const hasClicked = useWindowStore((s) => s.hasClicked);
+  const [dismissed, setDismissed] = useState(false);
+  const timerRef = useRef(null);
 
   useEffect(() => {
     if (hasClicked && !dismissed) {
-      setFadingOut(true);
-      const t = setTimeout(() => setDismissed(true), 500);
-      return () => clearTimeout(t);
+      timerRef.current = setTimeout(() => setDismissed(true), 500);
+      return () => clearTimeout(timerRef.current);
     }
   }, [hasClicked, dismissed]);
 
@@ -18,7 +17,7 @@ function WelcomeBubble() {
 
   return (
     <div
-      className={`welcome-bubble${fadingOut ? ' welcome-bubble-dismiss' : ''}`}
+      className={`welcome-bubble${hasClicked ? ' welcome-bubble-dismiss' : ''}`}
       style={{
         position: 'absolute',
         left: '50%',
@@ -31,9 +30,9 @@ function WelcomeBubble() {
         padding: '10px 16px',
         maxWidth: '88%',
         boxShadow: '0 4px 16px rgba(255,20,147,0.2), 0 0 0 3px rgba(255,182,193,0.12)',
-        animation: 'welcomeBubbleFloat 3.5s ease-in-out infinite',
       }}
     >
+      {/* Bottom arrow */}
       <div
         style={{
           position: 'absolute',
